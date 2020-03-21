@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
     <title>Rumah Bekam Gorontalo </title>
+
 </head>
 <body>
 
     <!-- Navigation Bars -->
     <div class="topbar">
         <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="#">
-                <i class="fa fa-bars" aria-hidden="true" onclick="openSlideMenu()"></i>
-                <img src="icons/home.png" width="60" height="40" alt="">
-                <b style="color: white;">Rumah Bekam Gorontalo</b>
-            </a>
-            
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <span class="icon">
+                        <i class="fa fa-bars pr-3"></i>
+                    </span>
+                    <img src="icons/home.png" width="60" height="40" alt="">
+                    <span>
+                        <b style="color: white;">Rumah Bekam Gorontalo</b>
+                    </span>
+                </a>
+            </div>
+                
             <!-- Search Tab -->
             <form class="form-inline my-2 my-lg-0 ml-auto">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
@@ -28,75 +35,246 @@
             
             <!-- icon account navbars -->
             <div class="icon ml-4">
-                <h5>
-                    <i class="fas fa-bell mr-3 text-light" data-toggle="tooltip" title="Notifikasi"></i>
-                    <img src="icons/Pas Foto Latar Putih.jpg" alt="avatar" class="avatar">
-                    <i class="fas fa-sign-out-alt mr-3 ml-3 text-light" data-toggle="tooltip" title="Sign Out"></i>
-                </h5>
+                <i class="fas fa-bell mr-3 text-light" data-toggle="tooltip" title="Notifikasi"></i>
+                <img src="icons/Pas Foto Latar Putih.jpg" alt="avatar" class="avatar">
+                <i class="fas fa-sign-out-alt mr-3 ml-3 text-light" data-toggle="tooltip" title="Sign Out"></i>
             </div>
         </nav>
     </div>
     <!-- Side Bars Navigation -->
-    <div class="sidenav">
+    <div class="sidebar_menu">
         <ul>
-            <a href="index.html"><i class="fa fa-home"></i>Dashboard</a>
-            <button class="dropdown-btn"><i class="fa fa-user-tie" aria-hidden="true"></i> Pegawai<i class="fa fa-caret-down"></i></button>
-            <div class="dropdown-container">
-                    <a href="daftar-pegawai.html"><i class="fas fa-user-tie"></i>Daftar Pegawai</a>
-                    <a href="absen.html"><i class="fas fa-clipboard"></i>Absen</a>
-                    <a href="gaji.html"><i class="fas fa-file-invoice-dollar"></i>Gaji</a>
-            </div>
-            <button class="dropdown-btn"><i class="fa fa-user-injured" aria-hidden="true"></i> Pasien <i class="fa fa-caret-down"></i></button>
-            <div class="dropdown-container">
-                <a href="daftar-pasien.html"><i class="fa fa-user-injured" aria-hidden="true"></i>Daftar Pasien</a>
-                <a href="rekam-medik.html"><i class="fas fa-clipboard-list"></i>Rekam Medik</a>
-            </div>
-            <button class="dropdown-btn"><i class="fas fa-donate" aria-hidden="true"></i>Transaksi <i class="fa fa-caret-down"></i></button>
-            <div class="dropdown-container">
-                <a href="daftar-barang.html"><i class="fas fa-cubes"></i> Daftar Barang</a>
-                <a href="pengadaan.html"><i class="fas fa-parachute-box"></i> Pengadaan</a>
-                <a href="penjualan.html"><i class="fas fa-shipping-fast"></i>Penjualan</a>
-            </div>
-            <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a>
+            <li>
+                <a href="index.html">
+                    <span class="icon">
+                        <i class="fa fa-home"></i></span>
+                    <span class="list">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <button class="dropdown-btn">
+                    <span class="icon">
+                        <i class="fa fa-user-tie" aria-hidden="true"></i>
+                    </span>
+                    <span class="list">
+                        Pegawai
+                    </span> 
+                    <span class="icon">
+                        <i class="fa fa-caret-down"></i>
+                    </span>
+                </button>
+
+                    <div class="dropdown-container">
+                        <ul>
+                            <li>
+                                <a href="daftar-pegawai.html">
+                                    <span class="icon">
+                                        <i class="fas fa-user-tie"></i>
+                                    </span>
+                                    <span class="list">
+                                        Daftar Pegawai</a>
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                <a href="absen.html">
+                                    <span class="icon">
+                                        <i class="fas fa-clipboard"></i>
+                                    </span>
+                                    <span class="list">
+                                        Absen
+                                    </span> 
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="gaji.html">
+                                    <span class="icon">
+                                        <i class="fas fa-file-invoice-dollar"></i>
+                                    </span>
+                                    <span class="list">
+                                        Gaji
+                                    </span>
+                                </a>
+                            </li>    
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">
+                    <span class="icon">
+                        <i class="fa fa-user-injured" aria-hidden="true"></i> 
+                    </span>
+                    <span class="list">
+                        Pasien 
+                    </span>
+                    <span class="icon">
+                        <i class="fa fa-caret-down"></i>
+                    </span>
+                </button>
+                    
+                    <div class="dropdown-container">
+                        <ul>
+                            <li>
+                                <a href="daftar-pasien.html">
+                                    <span class="icon">
+                                        <i class="fa fa-user-injured" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="list">
+                                        Daftar Pasien
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rekam-medik.html">
+                                    <span class="icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </span>
+                                    <span class="list">
+                                        Rekam Medik
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">
+                    <span class="icon">
+                        <i class="fas fa-donate" aria-hidden="true"></i>
+                    </span>
+                    <span class="list">
+                        Transaksi 
+                    </span>
+                    <span class="icon">
+                        <i class="fa fa-caret-down"></i></button>
+                    </span>
+
+                    <div class="dropdown-container">
+                        <ul>
+                            <li>
+                                <a href="daftar-barang.html">
+                                    <span class="icon">
+                                        <i class="fas fa-cubes"></i> 
+                                    </span>
+                                    <span class="list">
+                                        Daftar Barang
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pengadaan.html">
+                                    <span class="icon">
+                                        <i class="fas fa-parachute-box"></i> 
+                                    </span>
+                                    <span class="list">
+                                        Pengadaan
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="penjualan.html">
+                                    <span class="icon">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </span>
+                                    <span class="list">
+                                        Penjualan
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </span>
+                    <span class="list">
+                        About
+                    </span>
+                </a>
+            </li>
         </ul>
     </div>
     <!-- batas Layout utama -->
 
         <!-- Content -->
     <div class="content pl-5 pt-3">
-        <h3><i class="fa fa-home"></i> Dashboard</h3><hr>
+        <div class="title-bar">
+            <span class="icon">
+                <i class="fa fa-home"></i> 
+            </span>
+            <span class="list">
+                Dashboard
+            </span>
+            <hr>
+        </div>
 
         <div class="row text-white pl-3">
             <div class="card bg-success" style="width: 18rem;">
                 <div class="card-body">
                     <div class="card-body-icon mr-3">
-                       <i class="fa fa-user-injured"></i>
+                        <i class="fa fa-user-injured"></i>
                     </div>
-                  <h3 class="card-title mb-0 mt-0 font-weight-bold">Jumlah Pasien</h3>
-                  <div class="display-4 ">1.000</div>
-                  <a href="#"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <h3 class="card-title mb-0 mt-0 font-weight-bold">
+                        <span class="list">
+                          Jumlah Pasien
+                        </span>  
+                    </h3>
+                    <div class="display-4 ">
+                        1.000
+                    </div>
+                    <a href="#">
+                        <p class="card-text text-white"> Lihat Detail 
+                            <i class="fas fa-angle-double-right ml-2"></i>
+                        </p>
+                    </a>
                 </div>
             </div>
 
             <div class="card bg-warning ml-auto" style="width: 18rem;">
                 <div class="card-body">
                     <div class="card-body-icon mr-3">
-                       <i class="fa fa-user-tie"></i>
+                        <i class="fa fa-user-tie"></i>
                     </div>
-                  <h3 class="card-title mb-0 mt-0 font-weight-bold">Jumlah Pegawai</h3>
-                  <div class="display-4 ">500</div>
-                  <a href="#"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <h3 class="card-title mb-0 mt-0 font-weight-bold">
+                        <span class="list">
+                            Jumlah Pegawai
+                        </span>
+                    </h3>
+                    <div class="display-4 ">
+                        500
+                    </div>
+                    <a href="#">
+                        <p class="card-text text-white">
+                            Lihat Detail 
+                            <i class="fas fa-angle-double-right ml-2">                                
+                            </i>
+                        </p>
+                    </a>
                 </div>
             </div>
 
             <div class="card bg-secondary ml-auto mr-5" style="width: 18rem;">
                 <div class="card-body">
                     <div class="card-body-icon mr-3">
-                       <i class="fa fa-donate"></i>
+                        <i class="fa fa-donate"></i>
                     </div>
-                  <h3 class="card-title mb-0 mt-0 font-weight-bold">Jumlah Laba</h3>
-                  <div class="display-5 mb-2 mt-2">Rp. 1.000.000</div>
-                  <a href="#"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <h3 class="card-title mb-0 mt-0 font-weight-bold">
+                        <span class="list">
+                            Jumlah Laba
+                        </span>
+                    </h3>
+                    <div class="display-5 mb-2 mt-2">
+                      Rp. 1.000.000
+                    </div>
+                    <a href="#">
+                        <p class="card-text text-white">
+                            Lihat Detail 
+                            <i class="fas fa-angle-double-right ml-2"></i>
+                        </p>
+                    </a>
                 </div>
             </div>
 

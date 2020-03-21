@@ -17,7 +17,6 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-function openSlideMenu() {
-  document.getElementsByClassName('sidenav').style.width = '50px';
-  document.getElementsByClassName('content').style.marginleft = '75px';
-}
+// $(".logo .icon").click(function() {
+//   $(".topbar").toggleClass("active")
+// })
