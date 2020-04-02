@@ -57,6 +57,7 @@ Style Top Nav Bar
     padding: 0 20px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .top_navbar .top_menu .logo .logo_img {
     margin-right: 10px;
 }
@@ -215,7 +216,7 @@ Animate SideBar MENU
 /* Style Main Content */
 .main_content {
     width: calc(100% - 210px);
-    margin-left: 210px;
+    margin-left: 220px;
     margin-top: 80px;
     transition: .3s;
     /* position: fixed; */
@@ -228,10 +229,10 @@ Animate SideBar MENU
 }
 
 .main_content .title-main .icon {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
-.wrapper .main_content .tambah-btn{
+.wrapper .main_content .tambah-btn {
     background: blue;
     font-size: small;
     font-weight: 600;
