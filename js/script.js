@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    $(".hamburger").click(function(){
+$(document).ready(function () {
+    $(".hamburger").click(function () {
         $(".wrapper").toggleClass("slide");
     });
 });
@@ -22,5 +22,3 @@ for (i = 0; i < dropdown.length; i++) {
 // $(function () {
 //     $('[data-toggle="tooltip"]').tooltip()
 // })
-
-
