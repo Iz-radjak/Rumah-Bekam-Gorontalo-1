@@ -232,17 +232,6 @@ Animate SideBar MENU
     margin-right: 10px;
 }
 
-.wrapper .main_content .tambah-btn {
-    background: blue;
-    font-size: small;
-    font-weight: 600;
-    color: white;
-    padding: 5px;
-    /* border: 1px solid black; */
-    width: 120px;
-    border-radius: 20px;
-    text-align: center;
-}
 
 /* 
 =================
@@ -275,18 +264,8 @@ Daftar Pegawai
 =================
 */
 
+
 .wrapper .main_content .table {
     margin-top: 15px;
     border: 1px solid white;
-}
-
-.wrapper .main_content table th {
-    background-color: blue;
-    color: white;
-    text-align: center;
-}
-
-.wrapper .main_content table td {
-    background-color: silver;
-    text-align: center;
 }
