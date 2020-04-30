@@ -22,3 +22,32 @@ for (i = 0; i < dropdown.length; i++) {
 // $(function () {
 //     $('[data-toggle="tooltip"]').tooltip()
 // })
+
+$(function () {
+    $('.tombolTambahData').on('click', function () {
+        $('#modalLabel').html('Tambah Data Pegawai');
+        $('.modal-footer button[type=submit]').html('Tambah Data');
+    });
+
+    $('.tampilModalUbah').on('click', function () {
+        $('#modalLabel').html('Ubah Data Pegawai');
+        $('.modal-footer button[type=submit]').html('Ubah Data');
+        $('.modal-body form').attr('action', 'http://localhost/Rumah-Bekam-Gorontalo/public/pegawai/ubah')
+
+        const id_pegawai = $(this).data('id_pegawai');
+
+        $.ajax({
+            url: 'http://localhost/Rumah-Bekam-Gorontalo/public/pegawai/getUbah',
+            data: {
+                id_pegawai: id_pegawai
+            },
+            method: 'post',
+            dataType: 'json',
+            success: function (data) {
+                $('#nama').val(data.nama);
+                $('#nip').val(data.nip);
+                $('#jabatan').val(data.jabatan);
+            }
+        });
+    });
+});

@@ -215,7 +215,8 @@ Animate SideBar MENU
 
 /* Style Main Content */
 .main_content {
-    width: calc(100% - 210px);
+    width: calc(100% - 20px);
+    /* width: calc(100% - 210px); */
     margin-left: 220px;
     margin-top: 80px;
     transition: .3s;

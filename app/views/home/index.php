@@ -1,15 +1,5 @@
 <!-- Content -->
-<div class="main_content">
-    <div class="title-main">
-        <span class="icon">
-            <i class="fa fa-home "></i>
-        </span>
-        <span class="list">
-            Dashboard
-        </span>
-        <hr>
-    </div>
-    <!-- 
+<!-- 
     <div class="row text-white pl-3">
         <div class="card bg-success" style="width: 18rem;">
             <div class="card-body">

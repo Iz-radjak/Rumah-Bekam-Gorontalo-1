@@ -1,42 +1,85 @@
 <!-- Content -->
-<div class="main_content">
-    <div class="title-main">
-        <span class="icon">
-            <i class="fas fa-user-tie"></i>
-        </span>
-        <span class="list">
-            <?= $data['judul']; ?>
-        </span>
-        <hr>
-    </div>
 
-    <button class="btn btn-primary" type="submit">+ Tambah Data</button>
+<?php Flasher::flash() ?>
 
-    <table class="table">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama Pegawai</th>
-                <th scope="col">NIP</th>
-                <th scope="col">Tanggal Terdaftar</th>
-                <th scope="col">Aksi</th>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
+    + Tambah Data
+</button>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr style="text-align: center">
+            <th scope="col">No</th>
+            <th scope="col">Nama Pegawai</th>
+            <th scope="col">NIP</th>
+            <th scope="col">Jabatan</th>
+            <th scope="col">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $i = 1;
+        foreach ($data['pegawai'] as $pegawai) : ?>
+            <tr style="text-align: center">
+                <th scope="row"><?= $i; ?></th>
+                <td><?= $pegawai['nama']; ?></td>
+                <td><?= $pegawai['nip']; ?></td>
+                <td><?= $pegawai['jabatan']; ?></td>
+                <td>
+
+                    <span>
+                        <a href=" <?= BASEURL; ?>/pegawai/ubah/<?= $pegawai['id_pegawai']; ?>" class="btn-sm btn-warning btn-sm ml-2 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $pegawai['id_pegawai']; ?>">Ubah</a>
+                    </span>
+                    <span>
+                        <a href=" <?= BASEURL; ?>/pegawai/hapus/<?= $pegawai['id_pegawai']; ?>" class="btn-sm btn-danger btn-sm ml-2" onclick="return confirm('Apakah Anda Akan Menghapus Data?');">Hapus</a>
+                    </span>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($data['pegawai'] as $pegawai) : ?>
-                <tr>
-                    <th scope="row"><?= $pegawai['id_pegawai']; ?></th>
-                    <td><?= $pegawai['nama']; ?></td>
-                    <td><?= $pegawai['nip']; ?></td>
-                    <td><?= $pegawai['jabatan']; ?></td>
-                    <td>
-                        <span><button class="btn btn-primary btn-sm" type="submit">Edit</button></span>
-                        <span><button class="btn btn-primary btn-sm" type="submit">Hapus</button></span>
-                    </td>
-                </tr>
-            <?php endforeach ?>
-        </tbody>
-    </table>
+        <?php $i++;
+        endforeach ?>
+    </tbody>
+</table>
 
-</div>
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Tambah Data Pegawai</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form action="<?= BASEURL; ?>/pegawai/tambah" method="POST">
+
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nip">NIP</label>
+                        <input type="number" class="form-control" id="nip" name="nip">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jabatan">Jabatan</label>
+                        <select class="form-control" id="jabatan" name="jabatan">
+                            <option value="Owner">Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Terapis">Terapis</option>
+                            <option value="Customer Service">Customer Service</option>
+                        </select>
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
