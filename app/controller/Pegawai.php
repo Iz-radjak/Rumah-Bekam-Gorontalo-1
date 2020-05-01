@@ -47,11 +47,11 @@ class Pegawai extends Controller
     public function ubah()
     {
         if ($this->model('Pegawai_model')->ubahDataPegawai($_POST) > 0) {
-            Flasher::setFlash('Data Pegawai', 'berhasil', 'diubah', 'success');
+            Flasher::setFlash('Data Pegawai', 'Berhasil', 'Diubah', 'success');
             header('Location: ' . BASEURL . '/pegawai');
             exit;
         } else {
-            Flasher::setFlash('Data Pegawai', 'gagal', 'diubah', 'danger');
+            Flasher::setFlash('Data Pegawai', 'Gagal', 'Diubah', 'danger');
             header('Location: ' . BASEURL . '/pegawai');
             exit;
         }

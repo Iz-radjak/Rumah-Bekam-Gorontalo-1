@@ -27,8 +27,9 @@
                 <td><?= $pegawai['jabatan']; ?></td>
                 <td>
 
+                    <!-- data-(nama bebas) -->
                     <span>
-                        <a href=" <?= BASEURL; ?>/pegawai/ubah/<?= $pegawai['id_pegawai']; ?>" class="btn-sm btn-warning btn-sm ml-2 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $pegawai['id_pegawai']; ?>">Ubah</a>
+                        <a href=" <?= BASEURL; ?>/pegawai/ubah/<?= $pegawai['id_pegawai']; ?>" class="btn-sm btn-warning btn-sm ml-2 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id_pegawai="<?= $pegawai['id_pegawai']; ?>">Ubah</a>
                     </span>
                     <span>
                         <a href=" <?= BASEURL; ?>/pegawai/hapus/<?= $pegawai['id_pegawai']; ?>" class="btn-sm btn-danger btn-sm ml-2" onclick="return confirm('Apakah Anda Akan Menghapus Data?');">Hapus</a>
@@ -53,7 +54,7 @@
             <div class="modal-body">
 
                 <form action="<?= BASEURL; ?>/pegawai/tambah" method="POST">
-
+                    <input type="hidden" name="id_pegawai" id="id_pegawai">
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama">

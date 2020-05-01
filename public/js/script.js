@@ -27,6 +27,10 @@ $(function () {
     $('.tombolTambahData').on('click', function () {
         $('#modalLabel').html('Tambah Data Pegawai');
         $('.modal-footer button[type=submit]').html('Tambah Data');
+        $('#nama').val('');
+        $('#nip').val('');
+        $('#jabatan').val('');
+        $('#id_pegawai').val('');
     });
 
     $('.tampilModalUbah').on('click', function () {
@@ -47,6 +51,8 @@ $(function () {
                 $('#nama').val(data.nama);
                 $('#nip').val(data.nip);
                 $('#jabatan').val(data.jabatan);
+                $('#id_pegawai').val(data.id_pegawai);
+
             }
         });
     });

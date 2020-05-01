@@ -55,8 +55,8 @@ class Pegawai_model
         $query = "UPDATE tb_pegawai SET
                     nama = :nama,
                     nip = :nip,
-                    jabatan = :jabatan,
-                WHERE id_pegawai = :id_pegawai";
+                    jabatan = :jabatan
+                WHERE id_pegawai = :id_pegawai ";
 
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
