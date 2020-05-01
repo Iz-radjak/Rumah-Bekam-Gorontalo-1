@@ -7,13 +7,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+/* body {
     background: #e1ecf2;
-}
+} */
 
-.wrapper {
+/* .wrapper {
     margin: 10px;
-}
+} */
 
 /*
 ================ 
@@ -22,11 +22,11 @@ Style Top Nav Bar
 */
 
 .wrapper .top_navbar {
-    width: calc(100% - 20px);
+    width: calc(100% - 0px);
     height: 60px;
     display: flex;
     position: fixed;
-    top: 10px;
+    top: 0px;
 }
 
 .wrapper .top_navbar .hamburger {
@@ -34,7 +34,7 @@ Style Top Nav Bar
     height: 100%;
     background: #020236;
     padding: 15px 17px;
-    border-top-left-radius: 20px;
+    /* border-top-left-radius: 20px; */
     cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ Style Top Nav Bar
     width: calc(100% - 70px);
     background: rgb(245, 241, 241);
     height: 100%;
-    border-top-right-radius: 20px;
+    /* border-top-right-radius: 20px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,11 +107,11 @@ Style SideBar MENU
 
 .wrapper .sidebar_menu {
     position: fixed;
-    height: calc(100% - 80px);
-    top: 70px;
-    left: 10px;
+    height: calc(100% - 0px);
+    top: 60px;
+    left: 0px;
     width: 200px;
-    border-bottom-left-radius: 20px;
+    /* border-bottom-left-radius: 20px; */
     background-color: #020236;
     font-size: small;
     transition: all 0.3s ease;
@@ -210,6 +210,12 @@ Animate SideBar MENU
 
 .wrapper.slide .main_content {
     width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+/* mencoba tambahan */
+.wrapper.slide .main_content .card {
+    width: calc(100% - 20px);
     margin-left: 80px;
 }
 

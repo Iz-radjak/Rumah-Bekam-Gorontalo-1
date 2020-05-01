@@ -36,9 +36,9 @@
                     </span>
                 </div>
                 <ul>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                    <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user"></i></a></li>
+                    <!-- <li><a href="#"><i class="fas fa-search"></i></a></li> -->
+                    <!-- <li><a href="#"><i class="fas fa-bell"></i></a></li> -->
+                    <!-- <li><a href="#"><i class="fas fa-user"></i></a></li> -->
                 </ul>
             </div>
         </div>
@@ -157,7 +157,7 @@
                     <div class="dropdown-container">
                         <ul>
                             <li>
-                                <a href="daftar-barang.html">
+                                <a href="<?= BASEURL; ?>/barang">
                                     <span class="icon">
                                         <i class="fas fa-cubes"></i>
                                     </span>
@@ -202,7 +202,7 @@
             </ul>
         </div>
 
-        <div class="container ml-2 ">
+        <div class="container ml-0 mr-2 ">
             <div class="main_content">
                 <div class="title-main">
                     <span class="icon">
@@ -212,9 +212,20 @@
                         <?= $data['judul']; ?>
                     </span>
                     <hr>
-                </div>
 
-                <!-- <nav aria-label="breadcrumb">
+                    <!-- <div class="card mb-2" style="width: calc(100% - 0px);">
+                    <div class="card-body">
+                        <span class="icon">
+                            <i class="<?= $data['icon']; ?>"></i>
+                        </span>
+                        <span class="list">
+                            <?= $data['judul']; ?>
+                        </span>
+                    </div>
+                </div> -->
+
+
+                    <!-- <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Library</a></li>
