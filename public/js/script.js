@@ -57,3 +57,49 @@ $(function () {
         });
     });
 });
+
+$(function () {
+    // tampil Pasien
+    $('.tombolTambahPasien').on('click', function () {
+        $('#modalLabel').html('Tambah Data Pasien');
+        $('.modal-footer button[type=submit]').html('Tambah Data');
+        $('#tgl_regis_pasien').val('');
+        $('#nama').val('');
+        $('#nik').val('');
+        $('#jk').val('');
+        $('#umur').val('');
+        $('#no_hp').val('');
+        $('#pekerjaan').val('');
+        $('#alamat').val('');
+        $('#id_pasien').val('');
+    });
+
+    $('.tombolUbahPasien').on('click', function () {
+        $('#modalLabel').html('Ubah Data Pasien');
+        $('.modal-footer button[type=submit]').html('Ubah Data');
+        $('.modal-body form').attr('action', 'http://localhost/Rumah-Bekam-Gorontalo/public/pasien/ubah')
+
+        const id_pasien = $(this).data('id_pasien');
+
+        $.ajax({
+            url: 'http://localhost/Rumah-Bekam-Gorontalo/public/pasien/getUbah',
+            data: {
+                id_pasien: id_pasien
+            },
+            method: 'post',
+            dataType: 'json',
+            success: function (data) {
+                $('#tgl_regis_pasien').val(data.tgl_regis_pasien);
+                $('#nama').val(data.nama);
+                $('#nik').val(data.nik);
+                $('#jk').val(data.jk);
+                $('#umur').val(data.umur);
+                $('#no_hp').val(data.no_hp);
+                $('#pekerjaan').val(data.pekerjaan);
+                $('#alamat').val(data.alamat);
+                $('#id_pasien').val(data.id_pasien);
+
+            }
+        });
+    });
+});

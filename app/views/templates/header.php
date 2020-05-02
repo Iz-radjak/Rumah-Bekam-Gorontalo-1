@@ -119,7 +119,7 @@
                     <div class="dropdown-container">
                         <ul>
                             <li>
-                                <a href="daftar-pasien.html">
+                                <a href="<?= BASEURL; ?>/pasien">
                                     <span class="icon">
                                         <i class="fa fa-user-injured" aria-hidden="true"></i>
                                     </span>
