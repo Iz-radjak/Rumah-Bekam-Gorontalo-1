@@ -27,11 +27,11 @@ class Pasien_model
     public function tambahDataPasien($data)
     {
         $query = "INSERT INTO tb_pasien
-        VALUES ('', :tgl_regis_pasien, :nama, :nik, :jk, :umur, :no_hp, :pekerjaan, :alamat)";
+        VALUES ('', :tgl_regis_pasien, :nama_pasien, :nik, :jk, :umur, :no_hp, :pekerjaan, :alamat)";
 
         $this->db->query($query);
         $this->db->bind('tgl_regis_pasien', $data['tgl_regis_pasien']);
-        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nama_pasien', $data['nama_pasien']);
         $this->db->bind('nik', $data['nik']);
         $this->db->bind('jk', $data['jk']);
         $this->db->bind('umur', $data['umur']);
@@ -59,7 +59,7 @@ class Pasien_model
     {
         $query = "UPDATE tb_pasien SET
                     tgl_regis_pasien = :tgl_regis_pasien,
-                    nama = :nama,
+                    nama_pasien = :nama_pasien,
                     nik = :nik,
                     jk = :jk,
                     umur = :umur,
@@ -70,7 +70,7 @@ class Pasien_model
 
         $this->db->query($query);
         $this->db->bind('tgl_regis_pasien', $data['tgl_regis_pasien']);
-        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nama_pasien', $data['nama_pasien']);
         $this->db->bind('nik', $data['nik']);
         $this->db->bind('jk', $data['jk']);
         $this->db->bind('umur', $data['umur']);

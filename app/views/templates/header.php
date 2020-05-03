@@ -129,7 +129,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="rekam-medik.html">
+                                <a href="<?= BASEURL; ?>/rekam medik">
                                     <span class="icon">
                                         <i class="fas fa-clipboard-list"></i>
                                     </span>

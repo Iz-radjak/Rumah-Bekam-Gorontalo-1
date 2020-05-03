@@ -22,7 +22,7 @@
         foreach ($data['pegawai'] as $pegawai) : ?>
             <tr style="text-align: center">
                 <th scope="row"><?= $i; ?></th>
-                <td><?= $pegawai['nama']; ?></td>
+                <td><?= $pegawai['nama_pegawai']; ?></td>
                 <td><?= $pegawai['nip']; ?></td>
                 <td><?= $pegawai['jabatan']; ?></td>
                 <td>
@@ -53,21 +53,21 @@
             </div>
             <div class="modal-body">
 
-                <form action="<?= BASEURL; ?>/pegawai/tambah" method="POST">
+                <form action="<?= BASEURL; ?>/pegawai/tambah" method="POST" autocomplete="off">
                     <input type="hidden" name="id_pegawai" id="id_pegawai">
                     <div class="form-group">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
+                        <label for="nama_pegawai">Nama Pegawai</label>
+                        <input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" required>
                     </div>
 
                     <div class="form-group">
                         <label for="nip">NIP</label>
-                        <input type="number" class="form-control" id="nip" name="nip">
+                        <input type="text" class="form-control" id="nip" name="nip" required>
                     </div>
 
                     <div class="form-group">
                         <label for="jabatan">Jabatan</label>
-                        <select class="form-control" id="jabatan" name="jabatan">
+                        <select class="form-control" id="jabatan" name="jabatan" required>
                             <option value="Owner">Owner</option>
                             <option value="Manager">Manager</option>
                             <option value="Terapis">Terapis</option>

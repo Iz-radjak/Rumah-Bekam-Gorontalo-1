@@ -3,46 +3,46 @@
 <?php Flasher::flash() ?>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary tombolTambahPasien" data-toggle="modal" data-target="#formModal">
+<!-- <button type="button" class="btn btn-primary tombolTambahPasien" data-toggle="modal" data-target="#formModal">
     + Tambah Data
-</button>
+</button> -->
 
 <table class="table">
     <thead class="thead-light">
         <tr style="text-align: center">
             <th scope="col">No</th>
-            <th scope="col">Tanggal Regis</th>
+            <th scope="col">Tanggal rekam Medik</th>
             <th scope="col">Nama Pasien</th>
-            <th scope="col">NIK</th>
-            <th scope="col">Jenis Kelamin</th>
-            <th scope="col">Umur</th>
-            <th scope="col">No. Telepon/Hp</th>
-            <th scope="col">Pekerjaan</th>
-            <th scope="col">Alamat</th>
+            <th scope="col">Keluhan</th>
+            <th scope="col">Tekanan Darah</th>
+            <th scope="col">Nama terapis</th>
+            <th scope="col">Jenis Layanan</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Diskon</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
     <tbody>
         <?php $i = 1;
-        foreach ($data['pasien'] as $pasien) : ?>
+        foreach ($data['rekam medik'] as $redik) : ?>
             <tr style="text-align: center">
                 <th scope="row"><?= $i; ?></th>
-                <td><?= $pasien['tgl_regis_pasien']; ?></td>
-                <td><?= $pasien['nama_pasien']; ?></td>
-                <td><?= $pasien['nik']; ?></td>
-                <td><?= $pasien['jk']; ?></td>
-                <td><?= $pasien['umur']; ?></td>
-                <td><?= $pasien['no_hp']; ?></td>
-                <td><?= $pasien['pekerjaan']; ?></td>
-                <td><?= $pasien['alamat']; ?></td>
+                <td><?= $redik['tgl_redik']; ?></td>
+                <td><?= $redik['nama_pasien']; ?></td>
+                <td><?= $redik['keluhan']; ?></td>
+                <td><?= $redik['tekanan_darah']; ?></td>
+                <td><?= $redik['nama_pegawai']; ?></td>
+                <td><?= $redik['nama_layanan']; ?></td>
+                <td><?= $redik['qty']; ?></td>
+                <td><?= $redik['disc']; ?></td>
                 <td>
 
                     <!-- data-(nama bebas) -->
                     <span>
-                        <a href=" <?= BASEURL; ?>/pasien/ubah/<?= $pasien['id_pasien']; ?>" class="btn-sm btn-warning btn-sm ml-2 tombolUbahPasien" data-toggle="modal" data-target="#formModal" data-id_pasien="<?= $pasien['id_pasien']; ?>">Ubah</a>
+                        <a href=" <?= BASEURL; ?>/rekamMedik/ubah/<?= $redik['id_redik']; ?>" class="btn-sm btn-warning btn-sm ml-2 tombolUbahPasien" data-toggle="modal" data-target="#formModal" data-id_pasien="<?= $redik['id_redik']; ?>">Ubah</a>
                     </span>
                     <span>
-                        <a href=" <?= BASEURL; ?>/pasien/hapus/<?= $pasien['id_pasien']; ?>" class="btn-sm btn-danger btn-sm ml-2" onclick="return confirm('Apakah Anda Akan Menghapus Data?');">Hapus</a>
+                        <a href=" <?= BASEURL; ?>/rekamMedik/hapus/<?= $redik['id_redik']; ?>" class="btn-sm btn-danger btn-sm ml-2" onclick="return confirm('Apakah Anda Akan Menghapus Data?');">Hapus</a>
                     </span>
                 </td>
             </tr>
@@ -71,8 +71,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="nama_pasien">Nama Pasien</label>
-                        <input type="text" class="form-control" id="nama_pasien" name="nama_pasien" required>
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
 
                     <div class="form-group">

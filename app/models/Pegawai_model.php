@@ -27,10 +27,10 @@ class Pegawai_model
     public function tambahDataPegawai($data)
     {
         $query = "INSERT INTO tb_pegawai
-        VALUES ('', :nama, :nip, :jabatan)";
+        VALUES ('', :nama_pegawai, :nip, :jabatan)";
 
         $this->db->query($query);
-        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nama_pegawai', $data['nama_pegawai']);
         $this->db->bind('nip', $data['nip']);
         $this->db->bind('jabatan', $data['jabatan']);
 
@@ -53,13 +53,13 @@ class Pegawai_model
     public function ubahDataPegawai($data)
     {
         $query = "UPDATE tb_pegawai SET
-                    nama = :nama,
+                    nama_pegawai = :nama_pegawai,
                     nip = :nip,
                     jabatan = :jabatan
                 WHERE id_pegawai = :id_pegawai ";
 
         $this->db->query($query);
-        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nama_pegawai', $data['nama_pegawai']);
         $this->db->bind('nip', $data['nip']);
         $this->db->bind('jabatan', $data['jabatan']);
         $this->db->bind('id_pegawai', $data['id_pegawai']);

@@ -27,7 +27,7 @@ $(function () {
     $('.tombolTambahData').on('click', function () {
         $('#modalLabel').html('Tambah Data Pegawai');
         $('.modal-footer button[type=submit]').html('Tambah Data');
-        $('#nama').val('');
+        $('#nama_pegawai').val('');
         $('#nip').val('');
         $('#jabatan').val('');
         $('#id_pegawai').val('');
@@ -48,7 +48,7 @@ $(function () {
             method: 'post',
             dataType: 'json',
             success: function (data) {
-                $('#nama').val(data.nama);
+                $('#nama_pegawai').val(data.nama_pegawai);
                 $('#nip').val(data.nip);
                 $('#jabatan').val(data.jabatan);
                 $('#id_pegawai').val(data.id_pegawai);
@@ -64,7 +64,7 @@ $(function () {
         $('#modalLabel').html('Tambah Data Pasien');
         $('.modal-footer button[type=submit]').html('Tambah Data');
         $('#tgl_regis_pasien').val('');
-        $('#nama').val('');
+        $('#nama_pasien').val('');
         $('#nik').val('');
         $('#jk').val('');
         $('#umur').val('');
@@ -90,7 +90,7 @@ $(function () {
             dataType: 'json',
             success: function (data) {
                 $('#tgl_regis_pasien').val(data.tgl_regis_pasien);
-                $('#nama').val(data.nama);
+                $('#nama_pasien').val(data.nama_pasien);
                 $('#nik').val(data.nik);
                 $('#jk').val(data.jk);
                 $('#umur').val(data.umur);
